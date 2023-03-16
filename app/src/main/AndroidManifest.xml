@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Project_COMP4200"
         tools:targetApi="31">
         <activity
+            android:name=".ViewSurveys"
+            android:exported="false" />
+        <activity
+            android:name=".CreateSurvey"
+            android:exported="false" />
+        <activity
+            android:name=".UserMenu"
+            android:exported="false" />
+        <activity
             android:name=".demoHomePage"
             android:exported="false" />
         <activity

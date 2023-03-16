@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     // redirect to App Home Page!! (poll part!)      // creating empty activity for now!!
-                    startActivity(new Intent(MainActivity.this,demoHomePage.class));
+                    startActivity(new Intent(MainActivity.this,UserMenu.class));
                     progressBar.setVisibility(View.GONE);
                 }else {
                     Toast.makeText(MainActivity.this, "Login Failed!, Please check credentials", Toast.LENGTH_LONG).show();
