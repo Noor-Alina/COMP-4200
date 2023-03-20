@@ -21,9 +21,6 @@
             android:name=".UserMenu"
             android:exported="false" />
         <activity
-            android:name=".demoHomePage"
-            android:exported="false" />
-        <activity
             android:name=".Register"
             android:exported="false" />
         <activity
