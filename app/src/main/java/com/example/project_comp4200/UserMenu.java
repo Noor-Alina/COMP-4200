@@ -18,7 +18,6 @@ public class UserMenu extends AppCompatActivity {
         setContentView(R.layout.activity_user_menu);
 
         createSurveyBtn = findViewById(R.id.createSurveyBtn);
-        viewSurveysBtn = findViewById(R.id.surveyResponsesBtn);
 
         createSurveyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,13 +27,6 @@ public class UserMenu extends AppCompatActivity {
             }
         });
 
-        viewSurveysBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent viewSurveysIntent = new Intent(UserMenu.this, ViewSurveys.class);
-                startActivity(viewSurveysIntent);
-            }
-        });
 
     }
 }
