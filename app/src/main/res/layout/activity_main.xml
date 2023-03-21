@@ -14,7 +14,7 @@
     <TextView
         android:id="@+id/tv_appName"
         android:layout_width="match_parent"
-        android:layout_height="209dp"
+        android:layout_height="121dp"
         android:layout_gravity="center"
         android:fontFamily="sans-serif-medium"
         android:padding="20dp"
@@ -67,21 +67,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_logIn"
-            android:layout_width="191dp"
-            android:layout_height="65dp"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:backgroundTint="@color/cardview_shadow_start_color"
             android:text="Log IN" />
 
         <Button
             android:id="@+id/btn_register"
-            android:layout_width="195dp"
-            android:layout_height="65dp"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/cardview_shadow_start_color"
