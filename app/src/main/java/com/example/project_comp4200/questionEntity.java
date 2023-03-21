@@ -22,7 +22,7 @@ public class questionEntity {
     public int qid;
 
     @ColumnInfo(name = "surveyid")
-    public int sid;
+    public long sid;
 
     @ColumnInfo(name = "question")
     public String questionText;
@@ -33,7 +33,7 @@ public class questionEntity {
 
     public questionEntity(){}
 
-    public questionEntity(String questionText, List<String> options, int surveyId) {
+    public questionEntity(String questionText, List<String> options, long surveyId) {
         this.questionText = questionText;
         this.options = options;
         this.sid = surveyId;
@@ -47,7 +47,7 @@ public class questionEntity {
         this.qid = id;
     }
 
-    public int getSurveyId() {
+    public long getSurveyId() {
         return sid;
     }
 

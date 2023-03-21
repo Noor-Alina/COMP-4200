@@ -38,7 +38,7 @@ public class CreateQuestions extends AppCompatActivity {
 
         totalNumberQuestions = createSurveyIntent.getIntExtra("numQuestions", 0);
 
-        int surveyID = createSurveyIntent.getIntExtra("surveyID", 0);
+        long surveyID = createSurveyIntent.getLongExtra("surveyID", 0);
 
         // var instantiations
         questionTitle = findViewById(R.id.questionTitle);
@@ -53,7 +53,7 @@ public class CreateQuestions extends AppCompatActivity {
 
 
         executor.execute(() -> {
-            surveyEntity currentSurvey = appDatabase.surveyDAO().getSurveyById(surveyID);
+            surveyEntity currentSurvey = appDatabase.surveyDAO().getSurveyByLong(surveyID);
 
             runOnUiThread(() -> {
                 nextQuestionBtn.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +68,8 @@ public class CreateQuestions extends AppCompatActivity {
                             options.add(option2.getText().toString());
                             options.add(option3.getText().toString());
                             options.add(option4.getText().toString());
+
+                            System.out.println(surveyID);
 
                             // creating new question
                             questionEntity newQuestion = new questionEntity(
@@ -97,6 +99,7 @@ public class CreateQuestions extends AppCompatActivity {
                                         nextQuestionBtn.setText("Post");
                                     }else if(questionCounter == totalNumberQuestions){
                                         Intent returnToMenuIntent = new Intent(CreateQuestions.this, UserMenu.class);
+                                        startActivity(returnToMenuIntent);
                                     }
                                 });
                             });

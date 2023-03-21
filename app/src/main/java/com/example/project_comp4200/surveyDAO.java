@@ -18,7 +18,7 @@ public interface surveyDAO {
     List<surveyEntity> getAllSurveys();
 
     @Query("SELECT * FROM surveys WHERE survey_id = :surveyId")
-    surveyEntity getSurveyById(int surveyId);
+    surveyEntity getSurveyByLong(long surveyId);
 
     @Update
     void updateSurvey(surveyEntity survey);
