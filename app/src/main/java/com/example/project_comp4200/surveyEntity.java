@@ -5,6 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity(tableName = "surveys")
@@ -24,10 +25,10 @@ public class surveyEntity {
     @ColumnInfo(name = "questions")
     public List<questionEntity> questions;
 
-    public surveyEntity(String title, String description, List<questionEntity> questions) {
+    public surveyEntity(String title, String description) {
         this.title = title;
         this.description = description;
-        this.questions = questions;
+        this.questions = new ArrayList<>();
     }
 
     public int getId() {

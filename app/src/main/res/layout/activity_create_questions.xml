@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateQuestions">
+
+    <!-- Question -->
+
+    <!-- Radio Buttons -->
+
+    <Button
+        android:id="@+id/nxtQuestionBtn"
+        android:layout_width="230dp"
+        android:layout_height="63dp"
+        android:text="Next Question"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
+
+    <EditText
+        android:id="@+id/questionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Enter question here..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="403dp"
+        android:layout_height="271dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questionTitle">
+
+        <!-- Option 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <!-- Radio Button for Option 1 -->
+
+            <!-- Edit Text for Option 1 -->
+            <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked" />
+
+            <EditText
+                android:id="@+id/option1Text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:hint="Enter text for Option 1"
+                android:text=""
+                android:inputType="text"/>
+        </LinearLayout>
+
+        <!-- Option 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:orientation="horizontal">
+
+            <!-- Radio Button for Option 2 -->
+            <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked" />
+
+            <!-- Edit Text for Option 2 -->
+            <EditText
+                android:id="@+id/option2Text"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_marginStart="16dp"
+                android:hint="Enter text for Option 2"
+                android:text=""
+                android:inputType="text"/>
+        </LinearLayout>
+
+        <!-- Option 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+            <!-- Radio Button for Option 3 -->
+            <RadioButton
+                android:id="@+id/option3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked" />
+
+            <!-- Edit Text for Option 3 -->
+            <EditText
+                android:id="@+id/option3Text"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginStart="16dp"
+                android:hint="Enter text for Option 3"
+                android:text=""
+                android:inputType="text"/>
+        </LinearLayout>
+
+
+        <!-- Option 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:orientation="horizontal">
+
+            <!-- Radio Button for Option 4 -->
+            <RadioButton
+                android:id="@+id/option4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked" />
+
+            <!-- Edit Text for Option 4 -->
+            <EditText
+                android:id="@+id/option4Text"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginStart="16dp"
+                android:hint="Enter text for Option 4"
+                android:text=""
+                android:inputType="text"/>
+        </LinearLayout>
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

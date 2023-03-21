@@ -12,7 +12,7 @@ import java.util.List;
 public interface surveyDAO {
 
     @Insert
-    void insertSurvey(surveyEntity survey);
+    long insertSurvey(surveyEntity survey);
 
     @Query("SELECT * FROM surveys")
     List<surveyEntity> getAllSurveys();

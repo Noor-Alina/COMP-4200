@@ -13,152 +13,45 @@
         <!-- Survey Title -->
         <EditText
             android:id="@+id/survey_title"
-            android:layout_width="match_parent"
+            android:layout_width="373dp"
             android:layout_height="wrap_content"
-            android:text="Survey Title"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="title"
+            android:inputType="text"
+            android:text=""
+            android:hint="@string/survey_title"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
+            android:textStyle="bold" />
 
         <!-- Survey Description -->
         <EditText
             android:id="@+id/survey_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="This is a survey description"
-            android:textSize="16sp"
-            android:layout_marginBottom="16dp" />
+            android:layout_width="372dp"
+            android:layout_height="91dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="description"
+            android:inputType="text"
+            android:text=""
+            android:hint="@string/survey_description"
+            android:textSize="16sp" />
 
-        <!-- Question -->
         <EditText
-            android:id="@+id/question"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Question?"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Radio Buttons -->
-        <RadioGroup
-            android:id="@+id/radio_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Option 1 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- Radio Button for Option 1 -->
-                <RadioButton
-                    android:id="@+id/option1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked" />
-
-                <!-- Edit Text for Option 1 -->
-                <EditText
-                    android:id="@+id/edit_text1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:hint="Enter text for Option 1"/>
-            </LinearLayout>
-
-            <!-- Option 2 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- Radio Button for Option 2 -->
-                <RadioButton
-                    android:id="@+id/option2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked" />
-
-                <!-- Edit Text for Option 2 -->
-                <EditText
-                    android:id="@+id/edit_text2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:hint="Enter text for Option 2" />
-            </LinearLayout>
-
-            <!-- Option 3 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- Radio Button for Option 3 -->
-                <RadioButton
-                    android:id="@+id/option3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked" />
-
-                <!-- Edit Text for Option 3 -->
-                <EditText
-                    android:id="@+id/edit_text3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:hint="Enter text for Option 3" />
-            </LinearLayout>
-
-
-            <!-- Option 4 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- Radio Button for Option 4 -->
-                <RadioButton
-                    android:id="@+id/option4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked" />
-
-                <!-- Edit Text for Option 4 -->
-                <EditText
-                    android:id="@+id/edit_text4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:hint="Enter text for Option 4" />
-            </LinearLayout>
-
-        </RadioGroup>
+            android:id="@+id/numQuestions"
+            android:layout_width="371dp"
+            android:layout_height="77dp"
+            android:autofillHints="questions amount"
+            android:ems="10"
+            android:inputType="number"
+            android:text=""
+            android:hint="@string/num_questions"
+            android:textSize="16sp" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="Add Question" />
+            android:id="@+id/surveyCreateBtn"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="Create Survey" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Post"
-            android:layout_gravity="center"/>
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Survey Results"
-            android:layout_gravity="center"
-            android:visibility="invisible"/>
 
     </LinearLayout>
 </ScrollView>

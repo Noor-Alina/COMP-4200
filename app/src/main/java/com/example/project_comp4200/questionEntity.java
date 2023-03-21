@@ -31,9 +31,12 @@ public class questionEntity {
     @ColumnInfo(name = "options")
     public List<String> options;
 
-    public questionEntity(String questionText, List<String> options) {
+    public questionEntity(){}
+
+    public questionEntity(String questionText, List<String> options, int surveyId) {
         this.questionText = questionText;
         this.options = options;
+        this.sid = surveyId;
     }
 
     public int getId() {
