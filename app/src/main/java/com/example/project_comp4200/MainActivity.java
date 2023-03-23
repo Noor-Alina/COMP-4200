@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,6 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Uri uri = getIntent().getData();
+        if(uri != null){
+            List<String> params = uri.getPathSegments();
+            String id = params.get(params.size() -1);
+            Toast.makeText(this, "id = "+ id, Toast.LENGTH_SHORT).show();
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
