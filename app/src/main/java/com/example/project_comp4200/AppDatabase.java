@@ -13,6 +13,8 @@ public abstract class AppDatabase extends RoomDatabase {
 
     public abstract questionsDAO questionsDAO();
 
+    public abstract selectedOptionDAO selectedOptionDAO();
+
     public static AppDatabase databaseInstance;
 
     public static synchronized AppDatabase getInstance(Context context){
