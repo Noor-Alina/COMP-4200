@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/orange_bg"
     tools:context=".CreateQuestions">
 
     <!-- Question -->
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:hint="Enter question here..."
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
+                android:textColor="@color/white"
                 android:hint="Enter text for Option 1"
                 android:text=""
                 android:inputType="text"/>
@@ -91,6 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="66dp"
                 android:layout_marginStart="16dp"
+                android:textColor="@color/white"
                 android:hint="Enter text for Option 2"
                 android:text=""
                 android:inputType="text"/>
@@ -115,6 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
                 android:layout_marginStart="16dp"
+                android:textColor="@color/white"
                 android:hint="Enter text for Option 3"
                 android:text=""
                 android:inputType="text"/>
@@ -140,6 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:layout_marginStart="16dp"
+                android:textColor="@color/white"
                 android:hint="Enter text for Option 4"
                 android:text=""
                 android:inputType="text"/>
