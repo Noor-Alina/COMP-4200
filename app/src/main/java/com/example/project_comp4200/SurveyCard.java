@@ -16,8 +16,8 @@ public class SurveyCard extends LinearLayout {
         super(context);
         LayoutInflater.from(context).inflate(R.layout.activity_survey_card, this, true);
 
-        titleView = findViewById(R.id.survey_title);
-        descriptionView = findViewById(R.id.survey_description);
+        titleView = findViewById(R.id.surveyTitle);
+        descriptionView = findViewById(R.id.surveyDescription);
     }
 
     public void setSurveyTitle(String title) {
