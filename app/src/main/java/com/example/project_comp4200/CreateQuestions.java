@@ -26,6 +26,7 @@ public class CreateQuestions extends AppCompatActivity {
 
     Button nextQuestionBtn;
     int questionCounter = 0;
+    surveyEntity currentSurvey;
 
     private final Executor executor = Executors.newSingleThreadExecutor();
 
@@ -53,7 +54,11 @@ public class CreateQuestions extends AppCompatActivity {
 
 
         executor.execute(() -> {
-            surveyEntity currentSurvey = appDatabase.surveyDAO().getSurveyByLong(surveyID);
+            try{
+                currentSurvey = appDatabase.surveyDAO().getSurveyByLong(surveyID);
+            }catch(Exception e){
+                System.out.println("Error occurred: " + e);
+            }
 
             runOnUiThread(() -> {
                 nextQuestionBtn.setOnClickListener(new View.OnClickListener() {

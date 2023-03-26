@@ -20,6 +20,7 @@ public class CreateSurvey extends AppCompatActivity {
     EditText surveyNumQuestions;
 
     Button surveyCreationBtn;
+    long surveyId;
 
     private final Executor executor = Executors.newSingleThreadExecutor();
     @Override
@@ -40,6 +41,7 @@ public class CreateSurvey extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
                 // verifying that all fields have been filled out
                 if(verifyFields()){
                     int numOfQuestions = Integer.parseInt(surveyNumQuestions.getText().toString());
@@ -56,7 +58,13 @@ public class CreateSurvey extends AppCompatActivity {
 
                     // Insert the survey into the database on a background thread
                     executor.execute(() -> {
-                        long surveyId = appDatabase.surveyDAO().insertSurvey(newSurvey);
+
+                        try{
+                            surveyId = appDatabase.surveyDAO().insertSurvey(newSurvey);
+                        }catch(Exception e){
+                            System.out.println("Error occurred" + e);
+                        }
+
 
                         // code to be ran on main ui thread
                         runOnUiThread(() -> {
