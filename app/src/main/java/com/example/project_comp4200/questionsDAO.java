@@ -17,6 +17,9 @@ public interface questionsDAO {
     @Query("SELECT * FROM questions WHERE surveyid = :surveyId")
     List<questionEntity> getQuestionsForSurvey(int surveyId);
 
+    @Query("DELETE FROM questions")
+    void deleteAllQuestions();
+
     @Query("SELECT * FROM questions WHERE id = :questionId")
     questionEntity getQuestionById(int questionId);
 

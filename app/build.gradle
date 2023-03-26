@@ -14,7 +14,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
     }
 
 
@@ -51,8 +50,6 @@ dependencies {
 
     // optional - Guava support for Room, including Optional and ListenableFuture
     implementation "androidx.room:room-guava:$room_version"
-
-    implementation 'androidx.multidex:multidex:2.0.1'
 
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"

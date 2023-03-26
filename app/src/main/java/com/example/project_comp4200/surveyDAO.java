@@ -17,8 +17,14 @@ public interface surveyDAO {
     @Query("SELECT * FROM surveys")
     List<surveyEntity> getAllSurveys();
 
+    @Query("DELETE FROM surveys")
+    void deleteAllSurveys();
+
     @Query("SELECT * FROM surveys WHERE survey_id = :surveyId")
     surveyEntity getSurveyByLong(long surveyId);
+
+    @Query("SELECT * FROM surveys WHERE userId = :userId")
+    List<surveyEntity> getSurveysByUserId(String userId);
 
     @Update
     void updateSurvey(surveyEntity survey);

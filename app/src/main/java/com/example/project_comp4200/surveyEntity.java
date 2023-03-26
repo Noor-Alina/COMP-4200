@@ -21,13 +21,17 @@ public class surveyEntity {
     @ColumnInfo(name = "description")
     public String description;
 
+    @ColumnInfo(name = "userId")
+    public String userId;
+
     @TypeConverters(questionListConverter.class)
     @ColumnInfo(name = "questions")
     public List<questionEntity> questions;
 
-    public surveyEntity(String title, String description) {
+    public surveyEntity(String title, String description, String userId) {
         this.title = title;
         this.description = description;
+        this.userId = userId;
         this.questions = new ArrayList<>();
     }
 
@@ -38,6 +42,8 @@ public class surveyEntity {
     public String getTitle() {
         return title;
     }
+
+    public String getUserId(){return userId; }
 
     public String getDescription() {
         return description;

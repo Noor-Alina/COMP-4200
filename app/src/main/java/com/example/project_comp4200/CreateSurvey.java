@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -20,6 +23,7 @@ public class CreateSurvey extends AppCompatActivity {
     EditText surveyNumQuestions;
 
     Button surveyCreationBtn;
+    surveyEntity newSurvey;
     long surveyId;
 
     private final Executor executor = Executors.newSingleThreadExecutor();
@@ -50,11 +54,21 @@ public class CreateSurvey extends AppCompatActivity {
                     Intent createQuestionIntent = new Intent(CreateSurvey.this, CreateQuestions.class);
                     createQuestionIntent.putExtra("numQuestions", numOfQuestions);
 
-                    // Create a surveyEntity object
-                    surveyEntity newSurvey = new surveyEntity(
-                            surveyTitle.getText().toString(),
-                            surveyDescription.getText().toString()
-                    );
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    if (user != null) {
+                        String userId = user.getUid();
+
+                        // Create a surveyEntity object
+                        newSurvey = new surveyEntity(
+                                surveyTitle.getText().toString(),
+                                surveyDescription.getText().toString(),
+                                userId
+                        );
+                    }else{
+                        System.out.println("Error occurred.");
+                    }
+
+
 
                     // Insert the survey into the database on a background thread
                     executor.execute(() -> {
