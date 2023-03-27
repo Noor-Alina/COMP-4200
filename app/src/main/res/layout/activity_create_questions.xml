@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/orange_bg"
+    android:background="@drawable/app_bg_gold"
     tools:context=".CreateQuestions">
 
     <!-- Question -->
@@ -16,6 +16,7 @@
         android:layout_width="230dp"
         android:layout_height="63dp"
         android:text="Next Question"
+        android:backgroundTint="@color/cardview_shadow_start_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -29,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:hint="Enter question here..."
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:hint="Enter text for Option 1"
                 android:text=""
                 android:inputType="text"/>
@@ -94,7 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="66dp"
                 android:layout_marginStart="16dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:hint="Enter text for Option 2"
                 android:text=""
                 android:inputType="text"/>
@@ -119,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
                 android:layout_marginStart="16dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:hint="Enter text for Option 3"
                 android:text=""
                 android:inputType="text"/>
@@ -145,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:layout_marginStart="16dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:hint="Enter text for Option 4"
                 android:text=""
                 android:inputType="text"/>
