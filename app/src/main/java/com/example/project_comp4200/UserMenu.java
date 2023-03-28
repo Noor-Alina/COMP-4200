@@ -72,4 +72,27 @@ public class UserMenu extends AppCompatActivity {
             }
         }
     }
+
+    private class FetchOtherSurveysTask extends AsyncTask<String, Void, List<surveyEntity>> {
+
+        @Override
+        protected List<surveyEntity> doInBackground(String... params) {
+            String userId = params[0];
+            AppDatabase appDatabase = AppController.getInstance().getAppDatabase();
+            return appDatabase.surveyDAO().getSurveysWithoutMatchingUserId(userId);
+        }
+
+        @Override
+        protected void onPostExecute(List<surveyEntity> surveys) {
+            LinearLayout otherSurveysLayout = findViewById(R.id.otherSurveysLayout);
+
+            // Populate the other scroll view with the surveys
+            for (surveyEntity survey : surveys) {
+                SurveyCard surveyCard = new SurveyCard(UserMenu.this);
+                surveyCard.setSurveyTitle(survey.getTitle());
+                surveyCard.setSurveyDescription(survey.getDescription());
+                otherSurveysLayout.addView(surveyCard);
+            }
+        }
+    }
 }
