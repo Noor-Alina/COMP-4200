@@ -44,10 +44,8 @@ public class UserMenu extends AppCompatActivity {
             String userId = (user.getUid());
 
             new FetchSurveysTask().execute(userId);
-
+            new FetchOtherSurveysTask().execute(userId);
         }
-
-
     }
 
     private class FetchSurveysTask extends AsyncTask<String, Void, List<surveyEntity>> {
@@ -70,6 +68,9 @@ public class UserMenu extends AppCompatActivity {
                 surveyCard.setSurveyDescription(survey.getDescription());
                 yourSurveysLayout.addView(surveyCard);
             }
+
+
+
         }
     }
 
@@ -86,7 +87,7 @@ public class UserMenu extends AppCompatActivity {
         protected void onPostExecute(List<surveyEntity> surveys) {
             LinearLayout otherSurveysLayout = findViewById(R.id.otherSurveysLayout);
 
-            // Populate the other scroll view with the surveys
+            // Populate the scroll view with the surveys
             for (surveyEntity survey : surveys) {
                 SurveyCard surveyCard = new SurveyCard(UserMenu.this);
                 surveyCard.setSurveyTitle(survey.getTitle());

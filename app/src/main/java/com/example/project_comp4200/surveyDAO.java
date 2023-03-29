@@ -23,6 +23,9 @@ public interface surveyDAO {
     @Query("SELECT * FROM surveys WHERE survey_id = :surveyId")
     surveyEntity getSurveyByLong(long surveyId);
 
+    @Query("SELECT survey_id FROM surveys WHERE title = :surveyTitle")
+    int getSurveyIdFromTitle(String surveyTitle);
+
     @Query("SELECT * FROM surveys WHERE userId = :userId")
     List<surveyEntity> getSurveysByUserId(String userId);
 

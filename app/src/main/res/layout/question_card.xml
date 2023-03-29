@@ -22,30 +22,5 @@
         android:id="@+id/options_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
-
-        <RadioButton
-            android:id="@+id/option_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceSmall" />
-
-        <RadioButton
-            android:id="@+id/option_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceSmall" />
-
-        <RadioButton
-            android:id="@+id/option_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceSmall" />
-
-        <RadioButton
-            android:id="@+id/option_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceSmall" />
-    </RadioGroup>
+        android:layout_marginTop="8dp"/>
 </LinearLayout>
