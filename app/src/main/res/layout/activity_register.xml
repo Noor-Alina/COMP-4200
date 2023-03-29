@@ -23,6 +23,7 @@
         android:layout_height="match_parent"
         android:backgroundTint="@color/cardview_shadow_start_color"
         android:gravity="center"
+
         android:padding="20dp"
 
         android:textAlignment="center">
@@ -133,15 +134,17 @@
         <!-- Register Button -->
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="376dp"
+        android:layout_height="64dp"
         android:layout_below="@+id/confirm_password_input_layout"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:backgroundTint="@color/cardview_shadow_start_color"
-        android:text="Register User"
-        android:textColor="@color/white" />
+        android:text="Register"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
         <!-- Login Link -->
 

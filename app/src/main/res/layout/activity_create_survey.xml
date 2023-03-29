@@ -17,10 +17,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:autofillHints="title"
+            android:hint="@string/survey_title"
             android:inputType="text"
             android:text=""
-            android:hint="@string/survey_title"
-            android:textSize="24sp"
+            android:textSize="34sp"
             android:textStyle="bold" />
 
         <!-- Survey Description -->
@@ -30,10 +30,10 @@
             android:layout_height="91dp"
             android:layout_marginBottom="16dp"
             android:autofillHints="description"
+            android:hint="@string/survey_description"
             android:inputType="text"
             android:text=""
-            android:hint="@string/survey_description"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/numQuestions"
@@ -41,9 +41,9 @@
             android:layout_height="77dp"
             android:autofillHints="questions amount"
             android:ems="10"
+            android:hint="@string/num_questions"
             android:inputType="number"
             android:text=""
-            android:hint="@string/num_questions"
             android:textSize="16sp" />
 
         <Button

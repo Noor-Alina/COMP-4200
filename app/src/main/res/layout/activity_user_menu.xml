@@ -24,7 +24,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:text="Welcome home!"
             android:textAlignment="center"
             android:textSize="34sp"
@@ -37,15 +37,17 @@
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/cardview_shadow_start_color"
             android:padding="20dp"
-            android:text="Create A Survey"
-            android:textSize="20sp" />
+            android:text="Create New Survey"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/yourSurveysTitle"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Your Surveys"
-            android:textSize="26sp" />
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
         <HorizontalScrollView
             android:id="@+id/yourSurveysScrollView"
@@ -67,7 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Other Surveys"
-            android:textSize="26sp" />
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
         <HorizontalScrollView
             android:id="@+id/otherSurveysScrollView"
