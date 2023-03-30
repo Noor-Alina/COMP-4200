@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.project_comp4200">
     <application
         android:name=".Database.AppController"
         android:allowBackup="true"
@@ -16,16 +16,13 @@
             android:name=".ActivityClasses.surveyResultSummary"
             android:exported="false" />
         <activity
-            android:name=".SurveyCard"
-            android:exported="false" />
-        <activity
-            android:name=".Survey"
+            android:name=".ActivityClasses.Survey"
             android:exported="false" />
         <activity
             android:name=".ActivityClasses.CreateQuestions"
             android:exported="false" />
         <activity
-            android:name=".ViewSurveys"
+            android:name=".ActivityClasses.ViewSurveys"
             android:exported="false" />
         <activity
             android:name=".ActivityClasses.CreateSurvey"
@@ -34,10 +31,10 @@
             android:name=".ActivityClasses.UserMenu"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".ActivityClasses.Register"
             android:exported="false" />
         <activity
-            android:name=".ActivityClasses.MainActivity"
+            android:name=".Database.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

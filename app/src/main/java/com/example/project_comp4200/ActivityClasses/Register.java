@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.util.*;
 import android.widget.Toast;
 
-import com.example.project_comp4200.ActivityClasses.MainActivity;
+import com.example.project_comp4200.Database.MainActivity;
 import com.example.project_comp4200.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

@@ -1,4 +1,4 @@
-package com.example.project_comp4200.ActivityClasses;
+package com.example.project_comp4200.Database;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.project_comp4200.ActivityClasses.UserMenu;
 import com.example.project_comp4200.R;
 import com.example.project_comp4200.ActivityClasses.Register;
 import com.google.android.gms.tasks.OnCompleteListener;
