@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_Blue">#CCDBEE</color>"
     <color name="colorPrimary">#9C27B0</color>
-    <color name="surveyCard">#F3DB94</color>
+    <color name="surveyCard">#FFD38C</color>
+    <color name="surveyCard_bg">#FFE5B4</color>
+
 </resources>
