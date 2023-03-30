@@ -32,6 +32,9 @@ public interface surveyDAO {
     @Query("SELECT * FROM surveys WHERE userId != :userId")
     List<surveyEntity> getSurveysWithoutMatchingUserId(String userId);
 
+    @Query("SELECT COUNT(*) FROM surveys WHERE survey_id = :surveyId")
+    int getResponseCount(int surveyId);
+
 
     @Update
     void updateSurvey(surveyEntity survey);
