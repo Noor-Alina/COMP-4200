@@ -17,6 +17,7 @@ import com.example.project_comp4200.R;
 public class SurveyCard extends CardView {
     public TextView titleView;
     public TextView descriptionView;
+    public TextView numberOfQuestions;
 
     public SurveyCard(Context context) {
         super(context);
@@ -24,6 +25,7 @@ public class SurveyCard extends CardView {
 
         titleView = findViewById(R.id.surveyTitle);
         descriptionView = findViewById(R.id.surveyDescription);
+        numberOfQuestions = findViewById(R.id.numberOfQuestions);
 
         // Add the click listener
         this.setOnClickListener(new OnClickListener() {
@@ -44,5 +46,14 @@ public class SurveyCard extends CardView {
 
     public void setSurveyDescription(String description) {
         descriptionView.setText(description);
+    }
+
+    public void setSurveyNumQuestions(int numQuestions){
+        numberOfQuestions.setText(String.valueOf(numQuestions));
+    }
+
+    public int returnNumberOfQuestions(){
+        int randomNumber = (int) (Math.random() * 3) + 1;
+        return 2;
     }
 }

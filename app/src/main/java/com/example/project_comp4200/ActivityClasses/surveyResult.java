@@ -19,7 +19,6 @@ public class surveyResult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_result);
-        resultView = findViewById(R.id.Data_textView);
 
 
         //get survey id from the userMenu intent extras
@@ -39,14 +38,6 @@ public class surveyResult extends AppCompatActivity {
             String surveyId = params[0];
             AppDatabase appDatabase = AppController.getInstance().getAppDatabase();
             return appDatabase.surveyDAO().getResponseCount(Integer.valueOf(surveyId));
-        }
-
-        protected void onPostExecute(Integer responsCount){
-
-            //add to text view the number of Responses
-            resultView.setText("Responses: "+ responsCount);
-
-
         }
     }
 }

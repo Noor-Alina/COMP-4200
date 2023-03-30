@@ -8,11 +8,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.project_comp4200.DBEntityFiles.questionEntity;
 import com.example.project_comp4200.Database.AppController;
@@ -26,6 +28,10 @@ public class Survey extends AppCompatActivity {
     private AppDatabase appDatabase;
     private int surveyId;
     private String surveyTitle;
+    private Boolean submittedFlag = false;
+
+    Button submitSurveyBtn;
+    Button backToMenuBtm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,29 @@ public class Survey extends AppCompatActivity {
         surveyTitle = intent.getStringExtra("surveyTitle");
 
         new LoadQuestionsTask().execute(surveyTitle);
+
+        submitSurveyBtn = findViewById(R.id.submit_survey_button);
+        backToMenuBtm = findViewById(R.id.backToMenu);
+
+        submitSurveyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!submittedFlag){
+                    Toast.makeText(Survey.this, "Thank you for your response!", Toast.LENGTH_SHORT).show();
+                    submittedFlag = true;
+                }else {
+                    Toast.makeText(Survey.this, "You cannot make multiple responses!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        backToMenuBtm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goBackToMenuIntent = new Intent(Survey.this, UserMenu.class);
+                startActivity(goBackToMenuIntent);
+            }
+        });
     }
 
     private class LoadQuestionsTask extends AsyncTask<String, Void, List<questionEntity>> {
@@ -92,6 +121,7 @@ public class Survey extends AppCompatActivity {
                 questionCardsContainer.addView(questionCard);
             }
         }
-
     }
+
+
 }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.project_comp4200.Database.AppController;
 import com.example.project_comp4200.Database.AppDatabase;
@@ -25,12 +26,14 @@ public class UserMenu extends AppCompatActivity {
     Button viewSurveysBtn;
     List<surveyEntity> surveys;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_menu);
 
         createSurveyBtn = findViewById(R.id.createSurveyBtn);
+
 
         createSurveyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +71,9 @@ public class UserMenu extends AppCompatActivity {
                 SurveyCard surveyCard = new SurveyCard(UserMenu.this);
                 surveyCard.setSurveyTitle(survey.getTitle());
                 surveyCard.setSurveyDescription(survey.getDescription());
+                surveyCard.setSurveyNumQuestions(surveyCard.returnNumberOfQuestions());
+
+
                 yourSurveysLayout.addView(surveyCard);
 
                 //set onclick listener for the survey card
@@ -111,6 +117,7 @@ public class UserMenu extends AppCompatActivity {
                 SurveyCard surveyCard = new SurveyCard(UserMenu.this);
                 surveyCard.setSurveyTitle(survey.getTitle());
                 surveyCard.setSurveyDescription(survey.getDescription());
+                surveyCard.setSurveyNumQuestions(surveyCard.returnNumberOfQuestions());
                 otherSurveysLayout.addView(surveyCard);
             }
         }

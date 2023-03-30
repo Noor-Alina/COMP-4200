@@ -18,7 +18,7 @@
         android:layout_gravity="center"
         android:fontFamily="sans-serif-condensed"
         android:padding="20dp"
-        android:text="SimpleSurveys"
+        android:text="PollVault"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="34sp"
