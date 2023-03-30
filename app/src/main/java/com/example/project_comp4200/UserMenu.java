@@ -67,7 +67,25 @@ public class UserMenu extends AppCompatActivity {
                 surveyCard.setSurveyTitle(survey.getTitle());
                 surveyCard.setSurveyDescription(survey.getDescription());
                 yourSurveysLayout.addView(surveyCard);
+
+
+                //set onclick listener for the survey card
+                surveyCard.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                        if (user != null && survey.getUserId().equals(user.getUid())){
+                            Intent resultIntent = new Intent(UserMenu.this, surveyResult.class);
+                            resultIntent.putExtra("surveyId", survey.getId());
+                            startActivity(resultIntent);
+                        }
+                        else
+                            if (user != null && !survey.getUserId().equals(user.getUid())){
+                            }
+                    }
+                });
             }
+
 
 
 
@@ -93,6 +111,7 @@ public class UserMenu extends AppCompatActivity {
                 surveyCard.setSurveyTitle(survey.getTitle());
                 surveyCard.setSurveyDescription(survey.getDescription());
                 otherSurveysLayout.addView(surveyCard);
+
             }
         }
     }
