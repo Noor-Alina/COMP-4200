@@ -1,10 +1,17 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.Database;
 
 import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
+import com.example.project_comp4200.DAOFiles.questionsDAO;
+import com.example.project_comp4200.DAOFiles.selectedOptionDAO;
+import com.example.project_comp4200.DAOFiles.surveyDAO;
+import com.example.project_comp4200.DBEntityFiles.questionEntity;
+import com.example.project_comp4200.DBEntityFiles.selectedOptionEntity;
+import com.example.project_comp4200.DBEntityFiles.surveyEntity;
 
 @Database(entities = {surveyEntity.class, questionEntity.class, selectedOptionEntity.class}, version = 3)
 public abstract class AppDatabase extends RoomDatabase {

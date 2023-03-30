@@ -1,6 +1,8 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.Database;
 
 import android.app.Application;
+
+import com.example.project_comp4200.Database.AppDatabase;
 
 public class AppController extends Application {
 

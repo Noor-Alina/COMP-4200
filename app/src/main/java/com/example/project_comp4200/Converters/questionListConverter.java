@@ -1,7 +1,8 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.Converters;
 
 import androidx.room.TypeConverter;
 
+import com.example.project_comp4200.DBEntityFiles.questionEntity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

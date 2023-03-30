@@ -1,10 +1,12 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.DAOFiles;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+
+import com.example.project_comp4200.DBEntityFiles.surveyEntity;
 
 import java.util.List;
 

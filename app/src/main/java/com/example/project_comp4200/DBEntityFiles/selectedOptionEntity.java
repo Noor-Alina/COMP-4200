@@ -1,4 +1,4 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.DBEntityFiles;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

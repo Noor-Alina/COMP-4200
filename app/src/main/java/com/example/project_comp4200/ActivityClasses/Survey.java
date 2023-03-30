@@ -1,4 +1,5 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.ActivityClasses;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +13,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.example.project_comp4200.DBEntityFiles.questionEntity;
+import com.example.project_comp4200.Database.AppController;
+import com.example.project_comp4200.Database.AppDatabase;
+import com.example.project_comp4200.R;
 
 import java.util.List;
 

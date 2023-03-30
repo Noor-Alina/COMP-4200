@@ -1,4 +1,4 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.CardClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.project_comp4200.ActivityClasses.Survey;
+import com.example.project_comp4200.R;
 
 public class SurveyCard extends CardView {
     public TextView titleView;

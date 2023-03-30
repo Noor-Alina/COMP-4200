@@ -1,8 +1,10 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.ActivityClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.project_comp4200.R;
 
 public class surveyResultSummary extends AppCompatActivity {
 

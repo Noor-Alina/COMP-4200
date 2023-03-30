@@ -1,4 +1,4 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.Database;
 
 
 import android.content.Context;
@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.project_comp4200.Database.Data;
+import com.example.project_comp4200.R;
 
 import java.util.ArrayList;
 

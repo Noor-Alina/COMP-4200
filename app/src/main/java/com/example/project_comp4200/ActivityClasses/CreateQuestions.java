@@ -1,4 +1,4 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.ActivityClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
+import com.example.project_comp4200.DBEntityFiles.surveyEntity;
+import com.example.project_comp4200.Database.AppController;
+import com.example.project_comp4200.Database.AppDatabase;
+import com.example.project_comp4200.R;
+import com.example.project_comp4200.DBEntityFiles.questionEntity;
+import com.example.project_comp4200.DBEntityFiles.surveyEntity;
+import com.example.project_comp4200.DAOFiles.surveyDAO;
+
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;

@@ -1,4 +1,4 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.ActivityClasses;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,13 +13,13 @@ import android.widget.TextView;
 import android.util.*;
 import android.widget.Toast;
 
+import com.example.project_comp4200.ActivityClasses.MainActivity;
+import com.example.project_comp4200.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.intellij.lang.annotations.Pattern;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
 
@@ -62,7 +62,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.login_link:
-                startActivity(new Intent(this,MainActivity.class));  // switching activity (intent)
+                startActivity(new Intent(this, MainActivity.class));  // switching activity (intent)
                 break;
             case R.id.registerButton:
                 registerUser();  // function to handle user registration
@@ -130,7 +130,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            User user = new User(fullName, email);
+                            com.example.project_comp4200.ActivityClasses.User user = new com.example.project_comp4200.ActivityClasses.User(fullName, email);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

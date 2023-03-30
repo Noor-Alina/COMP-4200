@@ -1,4 +1,4 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.ActivityClasses;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.project_comp4200.R;
+import com.example.project_comp4200.ActivityClasses.Register;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          */
         switch (view.getId()){
             case R.id.btn_register:
-                startActivity(new Intent(this,Register.class));  // switching activity (intent)
+                startActivity(new Intent(this, Register.class));  // switching activity (intent)
                 break;
             case R.id.btn_logIn:
                 userLogin();
@@ -125,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     // redirect to App Home Page!! (poll part!)      // creating empty activity for now!!
-                    startActivity(new Intent(MainActivity.this,UserMenu.class));
+                    startActivity(new Intent(MainActivity.this, UserMenu.class));
                     progressBar.setVisibility(View.GONE);
                 }else {
                     Toast.makeText(MainActivity.this, "Login Failed!, Please check credentials", Toast.LENGTH_LONG).show();

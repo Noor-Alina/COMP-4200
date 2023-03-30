@@ -1,4 +1,4 @@
-package com.example.project_comp4200;
+package com.example.project_comp4200.Database;
 
 public class Data {
 

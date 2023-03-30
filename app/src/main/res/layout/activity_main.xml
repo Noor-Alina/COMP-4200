@@ -8,7 +8,7 @@
     android:background="@drawable/app_bg_gold"
     android:padding="10dp"
 
-    tools:context=".MainActivity">
+    tools:context=".ActivityClasses.MainActivity">
 
 
     <TextView
